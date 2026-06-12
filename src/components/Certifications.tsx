@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -45,9 +46,10 @@ const certifications = [
 
 export default function Certifications() {
   return (
-    <section className="py-28 bg-slate-900">
-
+    <section className="py-24 bg-slate-950">
       <div className="max-w-7xl mx-auto px-6">
+
+        {/* Header */}
 
         <div className="text-center">
 
@@ -55,16 +57,18 @@ export default function Certifications() {
             EXPERTISE
           </span>
 
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="text-5xl font-bold text-white mt-4">
             Certifications & Expertise
           </h2>
 
-          <p className="text-slate-400 max-w-3xl mx-auto mt-6 text-lg">
+          <p className="text-slate-300 max-w-3xl mx-auto mt-6 text-lg">
             We specialize in enterprise infrastructure, cloud technologies,
             DevOps automation and mission-critical server management.
           </p>
 
         </div>
+
+        {/* Cards */}
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
 
@@ -79,7 +83,10 @@ export default function Certifications() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{
+                  delay: index * 0.1,
+                  duration: 0.5,
+                }}
                 whileHover={{
                   y: -8,
                   scale: 1.02,
@@ -99,29 +106,29 @@ export default function Certifications() {
                 "
               >
 
-                <div className="
-                  w-16
-                  h-16
-                  rounded-2xl
-                  bg-blue-500/10
-                  flex
-                  items-center
-                  justify-center
-                  shadow-[0_0_30px_rgba(59,130,246,0.25)]
-                ">
-
+                <div
+                  className="
+                    w-16
+                    h-16
+                    rounded-2xl
+                    bg-blue-500/10
+                    flex
+                    items-center
+                    justify-center
+                    shadow-[0_0_30px_rgba(59,130,246,0.25)]
+                  "
+                >
                   <Icon
                     size={34}
                     className="text-blue-400"
                   />
-
                 </div>
 
-                <h3 className="text-2xl font-semibold mt-6">
+                <h3 className="text-2xl font-bold text-white mt-6">
                   {item.title}
                 </h3>
 
-                <p className="text-slate-400 mt-4 leading-7">
+                <p className="text-slate-300 mt-4 leading-7">
                   {item.tech}
                 </p>
 
@@ -134,7 +141,6 @@ export default function Certifications() {
         </div>
 
       </div>
-
     </section>
   );
 }

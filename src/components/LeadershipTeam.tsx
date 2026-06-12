@@ -27,9 +27,10 @@ const leaders = [
 
 export default function LeadershipTeam() {
   return (
-    <section className="py-28 bg-slate-950">
-
+    <section className="py-24 bg-slate-950">
       <div className="max-w-7xl mx-auto px-6">
+
+        {/* Section Header */}
 
         <div className="text-center">
 
@@ -37,16 +38,18 @@ export default function LeadershipTeam() {
             OUR LEADERSHIP
           </span>
 
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="text-5xl font-bold text-white mt-4">
             Meet Our Leadership Team
           </h2>
 
-          <p className="text-slate-400 max-w-3xl mx-auto mt-6 text-lg">
+          <p className="text-slate-300 max-w-3xl mx-auto mt-6 text-lg">
             Experienced professionals helping organizations modernize
             infrastructure with cloud, DevOps and enterprise solutions.
           </p>
 
         </div>
+
+        {/* Team Grid */}
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
 
@@ -57,7 +60,7 @@ export default function LeadershipTeam() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
+              transition={{ delay: index * 0.15, duration: 0.5 }}
               whileHover={{ y: -10 }}
               className="
                 group
@@ -77,17 +80,19 @@ export default function LeadershipTeam() {
 
               <div className="relative w-40 h-40 mx-auto">
 
-                <div className="
-                  absolute
-                  inset-0
-                  rounded-full
-                  bg-blue-500/20
-                  blur-3xl
-                  scale-110
-                  group-hover:scale-125
-                  transition
-                  duration-300
-                " />
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    rounded-full
+                    bg-blue-500/20
+                    blur-3xl
+                    scale-110
+                    group-hover:scale-125
+                    transition
+                    duration-300
+                  "
+                />
 
                 <Image
                   src={person.image}
@@ -105,15 +110,15 @@ export default function LeadershipTeam() {
 
               </div>
 
-              <h3 className="text-2xl font-bold mt-8">
+              <h3 className="text-2xl font-bold text-white mt-8">
                 {person.name}
               </h3>
 
-              <p className="text-blue-400 mt-2">
+              <p className="text-blue-400 mt-2 font-medium">
                 {person.role}
               </p>
 
-              <p className="text-slate-400 mt-5 leading-7">
+              <p className="text-slate-300 mt-5 leading-7">
                 {person.desc}
               </p>
 
@@ -162,7 +167,6 @@ export default function LeadershipTeam() {
         </div>
 
       </div>
-
     </section>
   );
 }

@@ -51,3 +51,7 @@ body {
 .timeline-glow {
   animation: pulseGlow 2.5s infinite ease-in-out;
 }
+
+.section-title {
+  @apply text-white font-bold;
+}

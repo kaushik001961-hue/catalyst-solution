@@ -1,7 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Rocket, Server, Cloud, ShieldCheck, Globe } from "lucide-react";
+import {
+  Rocket,
+  Server,
+  Cloud,
+  ShieldCheck,
+  Globe,
+} from "lucide-react";
 
 const timeline = [
   {
@@ -43,9 +49,10 @@ const timeline = [
 
 export default function CompanyTimeline() {
   return (
-    <section className="py-28 bg-slate-900 overflow-hidden">
-
+    <section className="py-24 bg-slate-950">
       <div className="max-w-7xl mx-auto px-6">
+
+        {/* Header */}
 
         <div className="text-center">
 
@@ -53,30 +60,29 @@ export default function CompanyTimeline() {
             OUR JOURNEY
           </span>
 
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="text-5xl font-bold text-white mt-4">
             Company Growth Timeline
           </h2>
 
-          <p className="mt-6 text-slate-400 max-w-3xl mx-auto text-lg">
+          <p className="mt-6 text-slate-300 max-w-3xl mx-auto text-lg">
             Our journey of innovation, reliability and continuous growth
             in cloud infrastructure and server management.
           </p>
 
         </div>
 
+        {/* Timeline */}
+
         <div className="relative mt-20">
 
-          {/* Horizontal line */}
           <div className="hidden lg:block absolute top-8 left-0 right-0 h-[2px] bg-blue-500/20"></div>
 
           <div className="grid lg:grid-cols-5 gap-10">
 
             {timeline.map((item, index) => {
-
               const Icon = item.icon;
 
               return (
-
                 <motion.div
                   key={item.year}
                   initial={{ opacity: 0, y: 30 }}
@@ -84,49 +90,47 @@ export default function CompanyTimeline() {
                   viewport={{ once: true }}
                   transition={{
                     delay: index * 0.15,
+                    duration: 0.5,
                   }}
+                  whileHover={{ y: -8 }}
                   className="relative text-center"
                 >
 
-                  {/* Blue Glow */}
-
-                  <div className="
-                    w-20
-                    h-20
-                    rounded-full
-                    bg-blue-500/10
-                    mx-auto
-                    flex
-                    items-center
-                    justify-center
-                    border
-                    border-blue-500/30
-                    shadow-[0_0_40px_rgba(59,130,246,0.35)]
-                  ">
-
+                  <div
+                    className="
+                      w-20
+                      h-20
+                      rounded-full
+                      bg-blue-500/10
+                      mx-auto
+                      flex
+                      items-center
+                      justify-center
+                      border
+                      border-blue-500/30
+                      shadow-[0_0_40px_rgba(59,130,246,0.35)]
+                    "
+                  >
                     <Icon
                       size={34}
                       className="text-blue-400"
                     />
-
                   </div>
 
-                  <h3 className="text-3xl font-bold mt-6 text-blue-400">
+                  <h3 className="text-3xl font-bold text-blue-400 mt-6">
                     {item.year}
                   </h3>
 
-                  <h4 className="text-xl font-semibold mt-3">
+                  <h4 className="text-xl font-bold text-white mt-3">
                     {item.title}
                   </h4>
 
-                  <p className="text-slate-400 mt-4 leading-7">
+                  <p className="text-slate-300 mt-4 leading-7">
                     {item.description}
                   </p>
 
                 </motion.div>
-
               );
-
             })}
 
           </div>
@@ -134,7 +138,6 @@ export default function CompanyTimeline() {
         </div>
 
       </div>
-
     </section>
   );
 }

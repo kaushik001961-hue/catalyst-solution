@@ -36,7 +36,7 @@ export default function Technologies() {
             TECHNOLOGIES
           </span>
 
-          <h2 className="text-5xl font-bold mt-4">
+            <h2 className="text-5xl font-bold text-white mt-4">
             Technologies We Work With
           </h2>
 

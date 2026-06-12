@@ -47,7 +47,7 @@ export default function Stats() {
             ACHIEVEMENTS
           </span>
 
-          <h2 className="text-4xl lg:text-5xl font-bold mt-4">
+           <h2 className="text-5xl font-bold text-white mt-4">
             Trusted Infrastructure Partner
           </h2>
 

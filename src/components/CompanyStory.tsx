@@ -24,10 +24,9 @@ const features = [
 ];
 
 export default function CompanyStory() {
-  return (
-    <section className="py-28 bg-slate-950">
-
-      <div className="max-w-7xl mx-auto px-6">
+return (
+  <section className="py-24 bg-slate-950">
+    <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -64,10 +63,10 @@ export default function CompanyStory() {
               OUR STORY
             </span>
 
-            <h2 className="text-5xl font-bold mt-5 leading-tight">
-              Delivering Reliable Infrastructure
-              <span className="text-blue-500"> Since Day One</span>
-            </h2>
+          <h2 className="text-5xl font-bold text-white mt-5 leading-tight">
+  Delivering Reliable Infrastructure
+  <span className="text-blue-500"> Since Day One</span>
+</h2>
 
             <p className="mt-8 text-slate-300 text-lg leading-8">
               Catalyst Solution was founded with a simple mission:

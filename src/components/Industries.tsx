@@ -63,9 +63,10 @@ const industries = [
 
 export default function Industries() {
   return (
-    <section className="py-28 bg-slate-950">
-
+    <section className="py-24 bg-slate-950">
       <div className="max-w-7xl mx-auto px-6">
+
+        {/* Header */}
 
         <div className="text-center">
 
@@ -73,16 +74,18 @@ export default function Industries() {
             INDUSTRIES
           </span>
 
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="text-5xl font-bold text-white mt-4">
             Industries We Serve
           </h2>
 
-          <p className="text-slate-400 max-w-3xl mx-auto mt-6 text-lg">
+          <p className="text-slate-300 max-w-3xl mx-auto mt-6 text-lg">
             Catalyst Solution delivers cloud infrastructure, managed IT,
             DevOps and enterprise server solutions across diverse industries.
           </p>
 
         </div>
+
+        {/* Industry Cards */}
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
 
@@ -99,6 +102,7 @@ export default function Industries() {
                 viewport={{ once: true }}
                 transition={{
                   delay: index * 0.08,
+                  duration: 0.5,
                 }}
                 whileHover={{
                   y: -8,
@@ -119,18 +123,20 @@ export default function Industries() {
                 "
               >
 
-                <div className="
-                  w-16
-                  h-16
-                  rounded-2xl
-                  bg-blue-500/10
-                  flex
-                  items-center
-                  justify-center
-                  shadow-[0_0_30px_rgba(59,130,246,0.20)]
-                  group-hover:bg-blue-500/20
-                  transition
-                ">
+                <div
+                  className="
+                    w-16
+                    h-16
+                    rounded-2xl
+                    bg-blue-500/10
+                    flex
+                    items-center
+                    justify-center
+                    shadow-[0_0_30px_rgba(59,130,246,0.20)]
+                    group-hover:bg-blue-500/20
+                    transition
+                  "
+                >
 
                   <Icon
                     size={34}
@@ -139,11 +145,11 @@ export default function Industries() {
 
                 </div>
 
-                <h3 className="text-2xl font-semibold mt-6">
+                <h3 className="text-2xl font-bold text-white mt-6">
                   {item.title}
                 </h3>
 
-                <p className="text-slate-400 mt-4 leading-7">
+                <p className="text-slate-300 mt-4 leading-7">
                   {item.desc}
                 </p>
 
@@ -156,7 +162,6 @@ export default function Industries() {
         </div>
 
       </div>
-
     </section>
   );
 }

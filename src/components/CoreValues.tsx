@@ -33,11 +33,10 @@ export default function CoreValues() {
 
         <div className="text-center">
 
-          <span className="uppercase tracking-[4px] text-blue-500 text-sm">
-            CORE VALUES
-          </span>
-
-          <h2 className="text-5xl font-bold mt-4">
+      <span className="uppercase tracking-[4px] text-blue-500 text-sm">
+    CORE VALUES
+  </span>
+          <h2 className="text-5xl font-bold text-white mt-4">
             What Drives Catalyst Solution
           </h2>
 
