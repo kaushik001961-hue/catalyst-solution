@@ -7,7 +7,7 @@ import { useState } from "react";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
- {  name: "Services", href: "/services"},
+  { name: "Services", href: "/services"},
   { name: "Solutions", href: "/solutions" },
   { name: "Industries", href: "/industries" },
   { name: "Blog", href: "/blog" },
@@ -17,9 +17,9 @@ const navLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800">
-      <div className="max-w-7xl mx-auto px-6">
+return (
+  <header className="sticky top-0 z-50 bg-slate-950 border-b border-slate-800">
+    <div className="max-w-7xl mx-auto px-6">
 
         <div className="flex justify-between items-center h-20">
 
@@ -41,14 +41,15 @@ export default function Navbar() {
 
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-slate-300 hover:text-blue-400 transition"
-              >
-                {item.name}
-              </Link>
-            ))}
+  <Link
+    key={item.name}
+    href={item.href}
+    onClick={() => setOpen(false)}
+    className="block py-3 text-slate-300 hover:text-blue-400 transition"
+  >
+    {item.name}
+  </Link>
+))}
 
             <button className="bg-blue-600 px-5 py-3 rounded-xl hover:bg-blue-700 transition">
               Get Quote
@@ -63,18 +64,18 @@ export default function Navbar() {
           </button>
         </div>
 
-        {open && (
-          <div className="pb-6 lg:hidden flex flex-col gap-5">
-            {navLinks.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-
+       {open && (
+  <div className="absolute left-0 top-20 w-full bg-slate-950 z-50 px-6 py-6 lg:hidden flex flex-col gap-5 shadow-xl">
+           {navLinks.map((item) => (
+  <Link
+    key={item.name}
+    href={item.href}
+    onClick={() => setOpen(false)}
+    className="block py-3 text-slate-300 hover:text-blue-400 transition"
+  >
+    {item.name}
+  </Link>
+))}
             <button className="bg-blue-600 py-3 rounded-lg">
               Get Quote
             </button>
@@ -83,5 +84,5 @@ export default function Navbar() {
 
       </div>
     </header>
-  );
+    );
 }
